@@ -1,0 +1,11 @@
+.mail {
+	background-image: url("./icons/mail.png") no-repeat;
+	width: 33px;
+	height: 24px;
+}
+  
+.call {
+	background-image: url("./icons/call.png") no-repeat;
+	width: 28px;
+	height: 28px;
+}
