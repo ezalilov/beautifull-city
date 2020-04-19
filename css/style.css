@@ -30,6 +30,7 @@ h2 {
 @media (max-width: 992px) {
   .container, h1, h2, span {
     max-width: 960px;
+    font-size: calc( 90%);
   }
 }
 
@@ -720,6 +721,9 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .wait__btn {
+    min-width: 100%;
   }
   .right > .button__text {
     text-align: right;
