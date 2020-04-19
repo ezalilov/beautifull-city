@@ -1,0 +1,39 @@
+.works
+  background-image: linear-gradient( 0deg, #e6e6e6, #fff)
+
+  &__title
+    font-size: 25px
+    text-align: center
+    text-transform: uppercase
+    padding: 5rem 0
+    & h2
+      // font-weight: 500
+  
+.works-gallary
+  display: flex
+  flex-wrap: wrap
+  
+  & img
+    flex: 1 1 calc(33.33% - 30px)
+    // margin: 5px
+    // margin-bottom: 5rem
+    box-sizing: border-box
+    min-width: 170px
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 1rem
+    transition: all 0.3s ease
+
+
+  & img:hover
+    padding: 0
+    transform: scale(1.05)
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+    // padding: 50px 20px; font-size:400%; text-align:center; background:#b5ced8;
+
+
+  

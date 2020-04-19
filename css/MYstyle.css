@@ -1,0 +1,91 @@
+@import 'fonts.css';
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  *, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+	}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+}
+
+.nav {
+  text-transform: uppercase;
+  min-height: 50px;
+  background-color: #0c4e9d;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  transition: color .2s linear;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+.nav__link:hover {
+  color: gray;
+}
+
+
+.header__top {
+  background-color: #fff;
+  color: #0c4e9d;
+  min-height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-bar {
+  color: #fff;
+  background-color: #0c4e9d;
+}
+
+.menu__item {
+  margin-left: 2rem;
+}
+
+.menu__item a {
+  font-family: "Open Sans Light";
+  /* color: #fff; */
+}
+.menu__item a:hover {
+  text-decoration: none;
+  color: rgb(175, 175, 175);
+}
+/* .mail {
+	background-image: url("./icons/mail.png") no-repeat;
+	width: 33px;
+	height: 24px;
+}
+  
+.call {
+	background-image: url("./icons/call.png") no-repeat;
+	width: 28px;
+	height: 28px;
+} */
