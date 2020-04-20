@@ -2,12 +2,14 @@
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  box-sizing-margin: 0;
+  box-sizing-padding: 0;
+  box-sizing-border: 0;
 }
 
 html, body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
   font-size: 17px;
 }
 
@@ -27,10 +29,15 @@ h2 {
   padding: 0 1rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .container, h1, h2, span {
-    max-width: 960px;
     font-size: calc( 90%);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
   }
 }
 
@@ -349,7 +356,7 @@ h2 {
 }
 
 .intro-wrap {
-  min-height: 660px;
+  padding: 5rem 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#0c4e9d), to(#1c97e1));
   background-image: linear-gradient(0deg, #0c4e9d, #1c97e1);
 }
@@ -361,6 +368,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .intro-title {
@@ -379,12 +389,16 @@ h2 {
   max-height: 100%;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .intro {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .intro-img img {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -617,12 +631,11 @@ h2 {
 }
 
 .works-gallary img {
+  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(33.33% - 30px);
           flex: 1 1 calc(33.33% - 30px);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  min-width: 170px;
+  min-width: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -655,7 +668,7 @@ h2 {
 }
 
 .wait {
-  padding: 12rem 0rem;
+  padding: 10rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,6 +729,9 @@ h2 {
 }
 
 @media (max-width: 767px) {
+  .wait {
+    padding: 2rem 0rem;
+  }
   .wait__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -723,7 +739,8 @@ h2 {
             flex-direction: column;
   }
   .wait__btn {
-    min-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .right > .button__text {
     text-align: right;

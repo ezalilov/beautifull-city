@@ -2,7 +2,7 @@
   background-image: linear-gradient( 0deg, #e6e6e6, #fff)
 
 .wait
-  padding: 12rem 0rem
+  padding: 10rem 0rem
   display: flex
   align-items: center
   justify-content: center
@@ -44,11 +44,14 @@
 
 
 @media ( max-width: 767px )
+  .wait
+    padding: 2rem 0rem
   .wait__buttons
     flex-direction: column
 
   .wait__btn
-    min-width: 100%
+    margin-left: 0
+    margin-right: 0
     
   .right > .button__text
     text-align: right

@@ -2,11 +2,13 @@
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
 	box-sizing: border-box
+  margin: 0
+  padding: 0
+  border: 0
  
 html, body 
   height: 100%
   +bold 
-  margin: 0
   font-size: 17px
 
 h1, h2
@@ -18,16 +20,21 @@ h2
 
 .container 
   max-width: 1200px
-  // max-width: 1450px
   margin: 0 auto
   padding: 0 1rem
 
-@media ( max-width: 992px )
+@media ( max-width: 1200px )
   .container, h1, h2, span
-    max-width: 960px
     font-size: calc( 90% )
 
+// @media ( max-width: 992px )
+//   .container, h1, h2, span, a
+//     font-size: calc( 90% )
+    
 
+@media ( max-width: 767px )
+  .container
+    max-width: none
 
   
   
