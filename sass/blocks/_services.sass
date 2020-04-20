@@ -1,5 +1,5 @@
 .service-wrap
-  min-height: 1000px
+  // min-height: 1000px
 
 .separator
   width: 2px
@@ -11,6 +11,7 @@
   display: flex
   flex-direction: column
   align-items: center
+  padding: 0 0 4rem 0
   &-slider
     display: flex
     justify-content: space-between
@@ -40,39 +41,54 @@
         align-self: center
         text-align: center
       &__img
-        margin-top: 1rem
+        margin: 1rem
+        // overflow: hidden
+        // position: relative
+        & img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          // position: absolute
+          // top: 0
+          // left: 0
+
       &__text
         margin-bottom: 1rem
     &__item:first-child
       border-left: none
       margin: 0
 
-      
-
-  &-content__item
-    display: flex
-    height: 350px
-    width: 970px
-    align-items: center
-    margin-bottom: 5rem
 
   &-button
     max-width: 500px
     font-size: 30px
     min-height: 67px
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
-    margin-bottom: 4rem
+    // margin-bottom: 4rem
 
+.service-content__item
+  display: flex
+  align-items: center
+  margin-bottom: 3rem
+  padding: 0 2rem
 .content
+  &-img
+    flex: 0 0 20%
+    & img
+      width: 100%
+
   &-text-wrap, &-img
-    flex-grow: 1
+    // flex-grow: 1
   &-text-wrap
-    flex-basis: 50%
-    align-self: stretch
+    padding: 0 2rem
+    // flex-basis: 50%
+    // align-self: stretch
   &-title
+    display: flex
+    align-items: center
     font-size: 2rem
     text-transform: uppercase
-    margin: 3rem 0
+    margin: 2rem 0
   &-desc
     text-align: justify
     line-height: 1.5
@@ -89,9 +105,37 @@
   text-transform: uppercase
   font-weight: 600
   background: url(/assets/img/services/city.png) repeat-x left 40%
+.img_responsive
+  display: none
+  margin-right: 1rem
+  width: 50%
 
+
+
+@media ( max-width: 1200px )
+  .service-slider__item__text
+    font-size: 12px
+
+@media ( max-width: 992px )
+  .service-slider
+    display: none
+  .service-content__item
+    padding-top: 2rem
 
 @media ( max-width: 767px )
+  .img_responsive
+    display: block
+    
+  .content-img
+    display: none
+  .insideimg
+    display: inline
+  .service-content > *
+    padding: 0
+    & > *
+      padding: 0rem
+  h2, .service-button
+    font-size: 1rem
   .slogan__text
     font-size: calc( 60% )
 
