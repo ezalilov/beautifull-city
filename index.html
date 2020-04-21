@@ -408,23 +408,24 @@
         d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
       </svg>
       <div class="container">
-        <form>
+        <form id="feedback" method="POST">
+          <input type="hidden" name="formData" value="Сообщение с сайта">
           <ul class="flex-outer">
             <li>
               <label for="first-name">Имя</label>
-              <input type="text" id="first-name" placeholder="Введите Ваше имя здесь">
+              <input name="name" type="text" id="first-name" placeholder="Введите Ваше имя здесь" autocomplete="on">
             </li>
             <li>
               <label for="email">e-mail</label>
-              <input type="email" id="email" placeholder="Введите почту здесь">
+              <input name="email" type="email" id="email" placeholder="Введите почту здесь" autocomplete="on" >
             </li>
             <li>
               <label for="phone">Телефон</label>
-              <input type="tel" id="phone" placeholder="Введите номер телефона здесь">
+              <input name="phone" type="tel" id="phone" placeholder="Введите номер телефона здесь" autocomplete="on">
             </li>
             <li>
               <label for="message">Сообщение</label>
-              <textarea rows="6" id="message" placeholder="Введите сообщение здесь"></textarea>
+              <textarea name="message" rows="6" id="message" placeholder="Введите сообщение здесь"></textarea>
             </li>
             <li>
               <button type="submit">Отправить</button>
