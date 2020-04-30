@@ -7,11 +7,15 @@
   align-self: center
   background-color: #0c4d9d50
 
+p
+  text-indent: 2rem
+  &:first-child
+    text-indent: 1rem
 .service
   display: flex
   flex-direction: column
   align-items: center
-  padding: 0 0 4rem 0
+  padding: 4rem 0
   &-slider
     display: flex
     justify-content: space-between
@@ -66,12 +70,51 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
     // margin-bottom: 4rem
 
-.service-content__item
+.slider-content
+  display: flex
+  min-width: 0
+  flex-wrap: wrap
+  margin-bottom: 2rem
+.content__item
+  min-width: 380px
   display: flex
   align-items: center
-  margin-bottom: 3rem
+  // margin: 1rem
   padding: 0 2rem
+  position: relative
+  cursor: pointer
+  flex: 1 1 calc(33.33% - 1rem)
+  
+
+.content__item:before, .content__item:after
+  content: ''
+  width: 10px
+  height: 1px
+  background-color: #000
+  position: absolute
+  top: 50%
+  transition: all .3s ease 0s
+
+.content__item:before
+  transform: rotate(40deg)
+  right: 7px
+.content__item:after
+  transform: rotate(-40deg)
+  right: 0px
+
+.content__item.active:before, .content__item.active:after
+  background-color: red
+.content__item.active:before
+  transform: rotate(-40deg)
+.content__item.active:after
+  transform: rotate(40deg)
+
+.someText
+  transition: all .3s ease 0s
+  // display: none
 .content
+  transition: all .3s ease 0s
+
   &-img
     flex: 0 0 20%
     & img
@@ -86,13 +129,17 @@
   &-title
     display: flex
     align-items: center
-    font-size: 2rem
+    font-size: 1rem
     text-transform: uppercase
     margin: 2rem 0
   &-desc
+    display: none
     text-align: justify
     line-height: 1.5
     font-weight: 500
+    padding: 1rem
+
+    
 
 .slogan
   display: flex
@@ -106,9 +153,9 @@
   font-weight: 600
   background: url(/assets/img/services/city.png) repeat-x left 40%
 .img_responsive
-  display: none
+  // display: none
   margin-right: 1rem
-  width: 50%
+  max-width: 6rem
 
 
 
@@ -119,7 +166,7 @@
 @media ( max-width: 992px )
   .service-slider
     display: none
-  .service-content__item
+  .content__item
     padding-top: 2rem
 
 @media ( max-width: 767px )

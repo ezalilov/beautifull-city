@@ -1,4 +1,16 @@
 $(document).ready(() => {
+   // $('.content__item').click(function(event) {
+   //    $(this).toggleClass('active')
+   //    console.log(event)
+
+// spoiler service
+   $('.content__item').click(function(event) {
+      $(this).toggleClass('active').next().slideToggle(300) 
+      // $(this).toggleClass('active').children('.content-text-wrap').children('.content-desc').slideToggle(300)
+      // console.log($(this).attr("id"));
+      //children('.content-text-wrap').children('.content-desc')
+   })
+
 // feedback
    $('form').submit(function () {
       var formID = $(this).attr('id'); // Получение ID формы
@@ -33,8 +45,51 @@ $(document).ready(() => {
   });
    
 // slider
-    // $('.service-slider').slick()
-//    $('.').slick({
+//   $('.slider-content').slick({
+//    variableWidth: true,
+//   })
+
+   //  $('.service-slider').slick({
+      //  slide: '.service-slider__item',
+      //  slidesToShow: 2,
+      //  arrows: false,
+      //  asNavFor: '.service-content'
+   //  });
+      // $('.slider-content').slick({
+      //    rtl: true,
+      //    variableWidth: true,
+      //       })
+   
+// let navNodes = $('.slider-nav')
+// $('.slider-for').each(function(i, node) {
+//    let listNodeUniqueClass = 'slider-for-' + i
+//    $(node).addClass(listNodeUniqueClass)
+//    let navNodeUniqueClass = 'slider-nav-' + i
+//    navNodes.eq(i).addClass(navNodeUniqueClass)
+
+//    let listSelector = '.' + listNodeUniqueClass
+//    let navSelector = '.' + navNodeUniqueClass
+//    console.log({navSelector, listSelector});  
+//    $(listSelector).slick({
+// 		slidesToShow: 1,
+// 		slidesToScroll: 1,
+// 		arrows: false,
+// 		fade: true,
+// 		asNavFor: navSelector,
+// 	});
+// 	$(navSelector).slick({
+//       slide: '.service-slider__item',
+// 		slidesToShow: 6,
+// 		slidesToScroll: 1,
+// 		asNavFor: listSelector,
+// 		// arrows: true,
+// 		centerPadding: '0',
+//       focusOnSelect: true,
+//    })
+// })
+
+    
+//    $('.service-content').slick({
 //    slidesToShow: 1,
 //    slidesToScroll: 1,
 //    arrows: false,
