@@ -519,7 +519,7 @@ p:first-child {
 }
 
 .content__item {
-  min-width: 380px;
+  min-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,8 +679,20 @@ p:first-child {
 }
 
 @media (max-width: 530px) {
+  .content-text-wrap {
+    padding: 0;
+  }
+  .img_responsive {
+    width: 50%;
+  }
+  .content__item {
+    padding: 0;
+  }
   .slogan__text {
     font-size: calc( 30%);
+  }
+  h2 {
+    font-size: 13px;
   }
 }
 
