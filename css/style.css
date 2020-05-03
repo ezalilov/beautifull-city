@@ -467,7 +467,9 @@ p:first-child {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 16.6%;
-  margin: 0 1rem;
+  margin: 0.5rem 0;
+  width: inherit;
+  border-left: 2px solid #0c4d9d4b;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
@@ -481,7 +483,7 @@ p:first-child {
 }
 
 .service-slider__item__img {
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .service-slider__item__img img {
@@ -491,13 +493,8 @@ p:first-child {
      object-fit: cover;
 }
 
-.service-slider__item__text {
-  margin-bottom: 1rem;
-}
-
 .service-slider__item:first-child {
   border-left: none;
-  margin: 0;
 }
 
 .service-button {
