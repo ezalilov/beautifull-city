@@ -1,3 +1,11 @@
+// $(window).resize(function () {
+//    $('.js-slider').not('.slick-initialized').slick('resize');
+// });
+
+// $(window).on('orientationchange', function () {
+//    $('.js-slider').not('.slick-initialized').slick('resize');
+// });
+
 $(document).ready(() => {
    // $('.content__item').click(function(event) {
    //    $(this).toggleClass('active')
@@ -59,7 +67,30 @@ $(document).ready(() => {
    slidesToScroll: 1,
    asNavFor: '.slider__content',
    focusOnSelect: true,
+   responsive: [{
 
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        infinite: true,
+         arrows: false,
+
+      }
+
+    }, {
+
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        arrows: false,
+      }
+
+    }, {
+
+      breakpoint: 300,
+      settings: "unslick" // destroys slick
+
+    }]
  })
 
    //  $('.service-slider').slick({
