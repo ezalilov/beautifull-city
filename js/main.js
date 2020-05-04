@@ -45,9 +45,22 @@ $(document).ready(() => {
   });
    
 // slider
-//   $('.slider-content').slick({
-//    variableWidth: true,
-//   })
+  $('.slider__content').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.slider__nav',
+   adaptiveHeight: true,
+  })
+  $('.slider__nav').slick({
+   // variableWidth: true,
+   slidesToShow: 6,
+   slidesToScroll: 1,
+   asNavFor: '.slider__content',
+   focusOnSelect: true,
+
+ })
 
    //  $('.service-slider').slick({
       //  slide: '.service-slider__item',
