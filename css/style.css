@@ -1080,11 +1080,15 @@ p:first-child {
   -webkit-box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: .5rem 0;
+  padding: 1rem 0;
   border-radius: 3px;
   background-color: #fff;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+}
+
+.modal > .container {
+  padding: 0 2.5rem;
 }
 
 /* Стили для активных классов подложки и окна */
@@ -1137,7 +1141,7 @@ p:first-child {
 }
 
 .flex-outer > li:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .flex-outer li label,
@@ -1171,10 +1175,11 @@ p:first-child {
 .flex-outer li textarea {
   padding: 15px;
   border: none;
+  border-bottom: 1px solid  #f2f2f2;
 }
 
 .flex-outer li button {
-  margin-left: auto;
+  margin-left: 6%;
   padding: 8px 16px;
   border: none;
   background: #1c97e1;
@@ -1186,5 +1191,22 @@ p:first-child {
 
 .flex-inner li {
   width: 100px;
+}
+
+@media (max-width: 530px) {
+  .flex-outer > li:not(:last-child) {
+    margin-bottom: .5rem;
+  }
+  .modal {
+    padding: .5rem 0;
+    width: 95%;
+  }
+  .modal > .container {
+    padding: 0 .5rem;
+  }
+  .flex-outer li input:not([type='checkbox']),
+  .flex-outer li textarea {
+    padding: 8px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,21 +19,21 @@ $(document).ready(() => {
       //children('.content-text-wrap').children('.content-desc')
    })
 
-// feedback
-   $('form').submit(function () {
-      var formID = $(this).attr('id'); // Получение ID формы
-      var formNm = $('#' + formID);
-      $.ajax({
-          type: 'POST',
-          url: './php/feedback.php', // Обработчик формы отправки
-          data: formNm.serialize(),
-          success: function (data) {
-              // Вывод текста результата отправки в текущей форме
-              $(formNm).html(data);
-          }
-      });
-      return false;
-  });
+// php feedback 
+//    $('form').submit(function () {
+//       var formID = $(this).attr('id'); // Получение ID формы
+//       var formNm = $('#' + formID);
+//       $.ajax({
+//           type: 'POST',
+//           url: './php/feedback.php', // Обработчик формы отправки
+//           data: formNm.serialize(),
+//           success: function (data) {
+//               // Вывод текста результата отправки в текущей форме
+//               $(formNm).html(data);
+//           }
+//       });
+//       return false;
+//   });
 
 // menu burger   
    $('.header__burger').click((e) => {
