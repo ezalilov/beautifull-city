@@ -2,9 +2,6 @@
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  box-sizing-margin: 0;
-  box-sizing-padding: 0;
-  box-sizing-border: 0;
 }
 
 html, body {
